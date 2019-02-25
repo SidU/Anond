@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.4",
+  "version": "1.0.0",
+  "id": "58b6996a-112b-4b03-b76b-dfeafb022078",
+  "packageName": "com.apps.anond",
+  "developer": {
+    "name": "Sid Uppal",
+    "websiteUrl": "https://github.com/OfficeDev/AnonBot-Sample",
+    "privacyUrl": "https://raw.githubusercontent.com/OfficeDev/AnonBot-Sample/master/BotFiles/Privacy.md",
+    "termsOfUseUrl": "https://raw.githubusercontent.com/OfficeDev/AnonBot-Sample/master/BotFiles/TOS.md"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "Anond",
+    "full": ""
+  },
+  "description": {
+    "short": "Reply anonymously",
+    "full": "Reply anonymously to messages"
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "58b6996a-112b-4b03-b76b-dfeafb022078",
+      "scopes": [
+        "personal",
+        "team",
+        "groupchat"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "58b6996a-112b-4b03-b76b-dfeafb022078",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "replyAnonymously",
+          "title": "Reply anonymously",
+          "description": "",
+          "initialRun": false,
+          "type": "action",
+          "context": [ "message" ],
+          "fetchTask": true,
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": []
+}
