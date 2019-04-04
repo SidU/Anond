@@ -2,7 +2,7 @@
 
 ![AnonBot avatar](https://bot-framework.azureedge.net/bot-icons-v1/bot_1Wm2f59z7653Cfs6jH5WDDop7QRFMf292GDlCdYDr7GqAGVc.png)
 
-This sample demonstrates how to utilize message-actions feature in Microsoft Teams to implement a bot that help users anonymously reply to messages.
+This sample demonstrates how to utilize message-actions feature in Microsoft Teams to implement a bot that helps users anonymously reply to messages.
 
 ![AnonBot avatar](BotFiles/AnondScreen.png)
 
