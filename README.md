@@ -24,7 +24,9 @@ This sample demonstrates how to utilize message-actions feature in Microsoft Tea
 * Step-in in debugger and enjoy!
 
 # How are users anonymized?
-The code currently uses [HMACSHA1](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.rfc2898derivebytes?view=netframework-4.7.2) to hash the AAD ID of the user to a hash with the bot's Application Secret as the salt. The hash is converted into a base64string and then [RoboHash](https://robohash.org/) is used to convert this hash into a unique avatar for the user. The end result is that AAD ID of user is uniquely hashed to a Robohash avatar that stays the same for that user for each reply.
+The code currently uses [HMACSHA1](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.rfc2898derivebytes?view=netframework-4.7.2) to hash the AAD ID of the user to a hash with the bot's Application Secret as the salt. The hash is converted into a base64string and then [RoboHash](https://robohash.org/) is used to convert this hash into a unique avatar for the user. The end result is that AAD ID of user is uniquely hashed to a Robohash avatar that stays the same for that user for each reply. Since message is posted by the bot on user's behalf, the user is "anonymous" for others in the team. Since the bot avatar image that the user's ID gets mapped to remains the same everytime that user replies, the user remains anonymous while others still have a chance to associate the messages with that user's anonymous version which is important for continuity. 
+
+So is the user truly "anonymous"? Not really. Clues for unmasking someone are in the description above. There might be other clues as well, e.g. language/grammer/tone, and excessive use of emojies or GIFs :)
 
 # Contributing
 
